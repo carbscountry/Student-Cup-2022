@@ -14,6 +14,33 @@ F1score （マクロ平均）
 - GPUの計算環境整備
     - EC2のg4dn.xlarge
     - nvidia-docker
+## 起動方法
+
+
+#### 0. 上の階層の docker-compose より、database コンテナを立ち上げる
+
+
+#### 1. 下記コマンドでビルドとコンテナ起動を行う
+```
+$ root@aa1519d1a400:/workspace# apt install docker
+$ root@aa1519d1a400:/workspace# sudo chmod 666 /var/run/docker.sock
+$ docker-compose up -d app
+```
+
+#### 2. コンテナにアクセスし、ライブラリをインストール
+```
+$ docker-compose exec  app /bin/bash
+
+root@aa1519d1a400:/workspace# pip install --upgrade pip
+root@aa1519d1a400:/workspace# pip install -U -r requirements.txt
+root@aa1519d1a400:/workspace# pip freeze > requirements.txt
+```
+
+#### 3. jupyter を起動
+```
+root@aa1519d1a400:/workspace# jupyter lab --allow-root --no-browser --NotebookApp.token='' --port 8888 --ip=0.0.0.0
+```
+#### 4.http://localhost:8081/ にアクセス
 
 
 ## Models
