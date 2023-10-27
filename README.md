@@ -32,8 +32,8 @@ $ docker-compose up -d app
 $ docker-compose exec  app /bin/bash
 
 root@aa1519d1a400:/workspace# pip install --upgrade pip
-root@aa1519d1a400:/workspace# pip install -U -r requirements.txt
 root@aa1519d1a400:/workspace# pip freeze > requirements.txt
+root@aa1519d1a400:/workspace# pip install -U -r requirements.txt
 ```
 
 #### 3. jupyter を起動
