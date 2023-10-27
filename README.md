@@ -17,13 +17,9 @@ F1score （マクロ平均）
 ## 起動方法
 
 
-#### 0. 上の階層の docker-compose より、database コンテナを立ち上げる
-
 
 #### 1. 下記コマンドでビルドとコンテナ起動を行う
 ```
-$ root@aa1519d1a400:/workspace# apt install docker
-$ root@aa1519d1a400:/workspace# sudo chmod 666 /var/run/docker.sock
 $ docker-compose up -d app
 ```
 
@@ -40,7 +36,7 @@ root@aa1519d1a400:/workspace# pip install -U -r requirements.txt
 ```
 root@aa1519d1a400:/workspace# jupyter lab --allow-root --no-browser --NotebookApp.token='' --port 8888 --ip=0.0.0.0
 ```
-#### 4.http://localhost:8081/ にアクセス
+#### 4.http://localhost:8080/ にアクセス
 
 
 ## Models
