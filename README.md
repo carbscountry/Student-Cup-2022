@@ -36,7 +36,8 @@ root@aa1519d1a400:/workspace# pip install -U -r requirements.txt
 ```
 root@aa1519d1a400:/workspace# jupyter lab --allow-root --no-browser --NotebookApp.token='' --port 8888 --ip=0.0.0.0
 ```
-#### 4.http://localhost:8080/ にアクセス
+
+#### 4.http://localhost:8080/ または、http://localhost:8081/にアクセス
 
 
 ## Models
